@@ -26,3 +26,5 @@ Moshi - Java serialization/deserialization library to convert Java Objects into 
 Testing - Espresso, Hilt, compose testing components
 
 Poller - custom util class for polling
+
+Navigation - raamcosta.compose-destinations compose naviagtion library used
