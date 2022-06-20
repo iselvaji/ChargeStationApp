@@ -13,7 +13,7 @@ UI design with Jetpack compose
 
 Programming language - Kotlin
 
-Coroutines - Is light wight threads for asynchronous programming
+Coroutines - Is light wight threads for asynchronous programming and polling
 
 Flow - Handle the stream of data asynchronously that executes sequentially.
 
@@ -25,3 +25,4 @@ Moshi - Java serialization/deserialization library to convert Java Objects into 
 
 Testing - Espresso, Hilt, compose testing components
 
+Poller - custom util class for polling
