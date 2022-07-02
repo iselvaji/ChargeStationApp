@@ -24,7 +24,6 @@ import com.google.maps.android.compose.rememberCameraPositionState
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.task.chargestationapp.R
-import com.task.chargestationapp.presentation.destinations.ChargingStationDetailsScreenDestination
 import com.task.chargestationapp.util.Constants
 import com.task.chargestationapp.util.NetworkUtil
 import com.task.chargestationapp.util.rememberLifecycleEvent
@@ -75,11 +74,10 @@ fun ChargingStationsMapScreen(
                                 title = station.title,
                                 snippet = stringResource(R.string.click_to_view),
                                 onInfoWindowClick = {
-                                    navigator.navigate(ChargingStationDetailsScreenDestination(station))
                                 },
                                 onClick = {
                                    // it.showInfoWindow()
-                                    navigator.navigate(ChargingStationDetailsScreenDestination(station))
+                                    viewModel.onEvent(ChargingStationsEvent.OnMapMarkerClick(station = station, navigator = navigator))
                                     true
                                 },
                                 icon = BitmapDescriptorFactory.defaultMarker(
